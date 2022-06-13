@@ -56,5 +56,4 @@ describe("employee class", () => {
             expect(dummy.getRole()).toBe(testRole);
         });
     });
-    
 });
