@@ -9,7 +9,7 @@ This is also my first attempt at making a test driven project using the jest pac
 
 
 
-![This is an image](SS.gif)
+![This is an image](SS.png)
 
 ## Table of Contents
 - [Installation](#installation)
