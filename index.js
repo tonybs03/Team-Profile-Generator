@@ -171,18 +171,36 @@ function renderProfile(newProfile, contactInfo) {
       null
     );
     // console.log(contact)
-    let codes = `
+    const MIcodes = `
             <div class="col-4 mb-5">
                 <div class="card mx-auto mt-5 h-100">
-                    <h5 class="card-header">${name}<br /><br />Manager</h5>
+                    <h5 class="card-header">${name}<br /><br />${type}</h5>
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item">ID: ${id}</li>
-                        <li class="list-group-item" style="min-height: 75px;">Email: ${email}</li>
+                        <li class="list-group-item" style="min-height: 75px;">Email:<a href="mailto: ${email}"> ${email}</a></li>
                         <li class="list-group-item">${contactType}: ${contact}</li>
                     </ul>
                  </div>
             </div> 
     `;
+    const Engcodes = `
+            <div class="col-4 mb-5">
+                <div class="card mx-auto mt-5 h-100">
+                    <h5 class="card-header">${name}<br /><br />${type}</h5>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">ID: ${id}</li>
+                        <li class="list-group-item" style="min-height: 75px;">Email:<a href="mailto: ${email}"> ${email}</a></li>
+                        <li class="list-group-item">${contactType}:<a href="https://github.com/${contact}" target="_blank"> ${contact} </a></li>
+                    </ul>
+                 </div>
+            </div> 
+    `;
+
+    let codes = (
+        type === 'Engineer' ?  Engcodes : 
+        MIcodes
+      );
+
     fs.appendFile("./dist/team-profiles.html", codes, (err) => {
         if (err) {console.log(err)}
     })   
