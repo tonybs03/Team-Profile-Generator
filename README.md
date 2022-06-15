@@ -7,6 +7,7 @@
 This is my first attempt at making a team profile generator using user prompt functions from inquirer package. 
 This is also my first attempt at making a test driven project using the jest package.
 
+[CLICK HERE](https://www.loom.com/share/2c03c635bced4526aa279d3ea1bfe3e2) for a walkthrough video. 
 
 
 ![This is an image](SS.png)
